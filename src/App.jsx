@@ -2,14 +2,14 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { linkToAuth } from './constants/routes';
 import { useEffect } from 'react';
-import Header from './Components/Header';
-import Banner from './Components/Banner';
-import SectionCompanies from './Components/SectionCompanies';
-import SectionRegular1 from './Components/SectionRegular1';
-import SectionRegular2 from './Components/SectionRegular2';
-import BlogSection from './Components/BlogSection';
-import SectionRegular3 from './Components/SectionRegular3';
-import SectionRegular4 from './Components/SectionRegular4';
+import Header from './Components/sections/Header';
+import Companies from './Components/sections/Companies';
+import Jobs from './Components/sections/Jobs';
+import Features from './Components/sections/Features';
+import Blogs from './Components/sections/Blogs';
+import SectionRegular3 from './Components/sections/SectionRegular3';
+import SectionRegular4 from './Components/sections/SectionRegular4';
+import './styles/normalize.scss';
 
 const App = () => {
   const isLogged = useSelector((state) => state.auth.loggedIn);
@@ -23,11 +23,11 @@ const App = () => {
   return (
     <>
       <Header />
-      <SectionRegular1 />
-      <SectionCompanies />
-      <SectionRegular2 />
+      <Jobs />
+      <Companies />
+      <Features />
       <SectionRegular3 />
-      <BlogSection />
+      <Blogs />
       <SectionRegular4/>
     </>
   );

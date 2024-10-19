@@ -1,0 +1,128 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    width: 358px;
+    height: 262px;
+    background: white;
+    border: 1px solid #ebebef;
+    padding: 29px;
+    box-sizing: border-box;
+    justify-content: space-between;
+
+    h6 {
+        margin: 24px 0px;
+        font-family: 'Archivo';
+        font-size: 18px;
+        font-weight: 700;
+        color: #030407;
+    }
+}
+
+.header {
+    display: flex;
+    gap: 14px;
+
+    .icon {
+        box-sizing: border-box;
+        height: 56px;
+        width: 56px;
+        padding: 12px;
+        border: 1px solid #ebebef;
+
+        img {
+            height: 31px;
+            width: 31px;
+        }
+    }
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    div {
+        height: 29px;
+        font-family: 'Inter';
+        font-size: 16px;
+        font-weight: 500;
+        letter-spacing: -0.32px;
+        color: #030407;
+    }
+
+    p {
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -0.3px;
+        color: #606476;
+    }
+}
+
+.tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.category {
+    box-sizing: border-box;
+    padding: 6px 12px;
+    color: #443fde;
+    background-color: #F3F3FC;
+}
+
+.type {
+    box-sizing: border-box;
+    padding: 6px 12px;
+    color: #c98b40;
+    background-color: #FEF7F1;
+}
+
+.details {
+    display: flex;
+    height: 24px;
+    gap: 24px;
+
+    img {
+        height: 24px;
+        width: 24px;
+    }
+
+    span {
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 500;
+        color: #606476;
+        line-height: 24px;
+    }
+
+    div {
+        display: flex;
+        gap: 4px;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    .item {
+        width: 338px;
+
+        h6 {
+            margin: 12px 0px;
+        }
+    }
+
+    .tags {
+        flex-direction: column;
+        gap: 0;
+        margin-bottom: 0;
+    }
+
+    .details {
+        flex-direction: column;
+        gap: 0;
+    }
+}

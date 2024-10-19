@@ -1,0 +1,183 @@
+@import 'extends';
+
+.section {
+  @extend .section;
+  height: 746px;
+  background: #f9f9fb;
+}
+
+.container {
+  @extend .container;
+  height: 618px;
+  width: 960px;
+  gap: 72px;
+
+}
+
+.title {
+  align-self: center;
+
+  h3 {
+    width: 464px;
+    height: 96px;
+    font-family: 'Archivo';
+    font-size: 40px;
+    font-weight: 700;
+    color: #030407;
+    letter-spacing: -0.8px;
+    text-align: center;
+  }
+}
+
+.carousel {
+  height: 450px;
+  position: relative;
+}
+
+.buttons {
+  @extend .buttonsGroup;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.slider {
+  display: flex;
+  justify-content: space-between;
+  animation: carousel 10s infinite linear;
+
+  &:hover {
+    animation-play-state: paused;
+  }
+
+  img {
+    width: 384px;
+    height: 440px;
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-120%);
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 450px;
+
+  p:first-child {
+    font-family: 'Inter';
+    font-size: 24px;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  p:last-child {
+    font-family: 'Inter';
+    font-size: 16px;
+    font-weight: 400;
+    color: #443fde;
+    height: 29px;
+    letter-spacing: -0.3px;
+  }
+}
+
+.mobeileDetail {
+  display: none;
+}
+
+.mobileImg {
+  display: none;
+}
+
+@media screen and (max-width: 648px) {
+  .section {
+    padding: 32px 16px;
+    height: 862px;
+  }
+
+  .container {
+    width: 338px;
+    height: 613px;
+
+  }
+
+  .mobeileDetail {
+    display: block;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #443fde;
+    line-height: 25px;
+  }
+
+  .title {
+    h3 {
+      padding-top: 14px;
+      width: 338px;
+      height: 145px;
+    }
+  }
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      display: none;
+    }
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 358px;
+
+  }
+
+  .buttons {
+    top: 0;
+    right: 0;
+    left: auto;
+    height: 20px;
+
+    div {
+      height: 20px;
+      padding: 0 15px;
+    }
+  }
+
+  .content:first-child {
+    letter-spacing: -0.5px;
+  }
+
+  .mobileImg {
+    display: flex;
+    position: absolute;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    width: 72px;
+    height: 72px;
+    border: 1px solid #ebebef;
+    background-color: #ffffff;
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  .content {
+    gap: 44px;
+  }
+}

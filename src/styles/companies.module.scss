@@ -1,0 +1,121 @@
+@import 'extends';
+
+.section {
+  @extend .section;
+  height: 576px;
+}
+
+.container {
+  @extend .container;
+  gap: 58px;
+  height: 738px;
+}
+
+.header {
+  height: 80px;
+  width: 1140px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 7.3px;
+  justify-content: space-between;
+  h3 {
+    font-family: 'Archivo';
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    color: #030407;
+  }
+  p {
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    color: #606476;
+  }
+}
+
+.buttons {
+  @extend .buttonsGroup;
+  align-self: flex-end;
+}
+
+.carousel {
+  height: 310px;
+}
+
+.slider {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 24px;
+  animation: carousel 10s infinite linear;
+  &:hover {
+    animation-play-state: paused;
+  }
+  @keyframes carousel {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+
+
+@media screen and (max-width: 648px) {
+  .section {
+    padding: 32px 16px;
+    height: 586px;
+  }
+  .container {
+    width: 338px;
+    height: 522px;
+  }
+  .header {
+    flex-direction: column;
+    width: 338px;
+    height: 150px;
+    gap: 14px;
+    .title {
+      height: 128px;
+    }
+    h3 {
+      height: 97px;
+      white-space: wrap;
+    }
+    .buttons {
+      align-self: flex-start;
+    }
+  }
+  .carousel {
+    width: 100%;
+    height: 300px;
+    .slider {
+      gap: 0;
+      height: 100%;
+      animation: carousel-mobile 10s infinite linear;
+      &:hover {
+        animation-play-state: paused;
+      }
+      @keyframes carousel-mobile {
+        0% {
+          transform: translateX(+100%);
+        }
+        100% {
+          transform: translateX(-500%);
+        }
+      }
+      .item {
+        width: 292px;
+        height: 300px;
+      }
+    }
+  }
+
+}

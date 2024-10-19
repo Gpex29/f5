@@ -1,15 +1,17 @@
+import styles from '../../styles/footer.module.scss';
+
 export default function Footer() {
   return (
-    <section class="footer">
-      <div class="container-footer">
+    <section className={styles.section}>
+      <div className={styles.container}>
         <a href="/">
           <img src="../img/ipsum.png" alt='Ipsum' />
         </a>
-        <div class="footer-layout">
-          <div class="footer-navigation-wrapper">
+        <div className={styles.layout}>
+          <div className={styles.navigation}>
             <p>PAGES</p><a href="/">Home</a><a href="#company">Company</a><a href="#blog">Blog</a>
           </div>
-          <div class="footer-form-wrapper">
+          <div className={styles.formWrapper}>
             <p>SIGN UP TO OUR NEWSLETTER</p>
             <form>
               <input type="email" placeholder="Email address" />

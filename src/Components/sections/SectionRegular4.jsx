@@ -1,16 +1,18 @@
+import styles from '../../styles/section4.module.scss';
+
 export default function SectionRegular4() {
   return (
-    <section class="section-4">
-      <div class="container-regular-4">
-        <div class="cta-block">
-          <div class="cta-icon-wrap">
+    <section className={styles.section}>
+      <div className={styles.container}>
+        <div className={styles.block}>
+          <div className={styles.icon}>
             <img src="../img/section4/search.png" alt='search' />
           </div>
-          <div class="cta-text-wrap">
+          <div className={styles.text}>
             <h4>Explore a job now!</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris rhoncus pharetra cursus. Suspendisse sodales porta leo, ac placerat ex pretium quis.</p>
           </div>
-          <div class="cta-search-wrapper">
+          <div className={styles.search}>
             <form>
               <input type="search" placeholder="Search..." />
               <button type='submit' >Search</button>

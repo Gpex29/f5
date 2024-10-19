@@ -1,0 +1,50 @@
+.content {
+  display: flex;
+  box-sizing: border-box;
+  padding: 16px;
+  gap: 16px;
+  height: 88px;
+  background-color: #f9f9fb;
+}
+
+.icon {
+  box-sizing: border-box;
+  height: 56px;
+  width: 56px;
+  border: 1px solid #ebebef;
+  background-color: #ffffff;
+  padding: 16px;
+  align-self: center;
+  img {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+h6 {
+  font-family: 'Inter';
+  font-size: 16px;
+  font-weight: 500;
+  color: #030407;
+  padding-top: 8px;
+}
+
+p {
+  font-family: 'Inter';
+  font-size: 14px;
+  font-weight: 400;
+  color: #606476;
+  padding-top: 8px;
+}
+
+@media screen and (max-width: 648px) {
+  p {
+    height: 144px;
+  }
+  .featureContentLayout {
+    height: 359px;
+  }
+  .content {
+    height: 110px;
+  }
+}

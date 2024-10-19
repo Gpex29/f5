@@ -15,3 +15,20 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.buttonsGroup {
+  display: flex;
+  gap: 12px;
+  div {
+    width: 48px;
+    height: 48px;
+    background: #ffffff;
+    padding: 12px;
+    box-sizing: border-box;
+    border: 1px solid #EBEBEF;
+    img {
+      width: 16px;
+      height: 16px;
+    }
+  }
+}

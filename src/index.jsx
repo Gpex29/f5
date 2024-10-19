@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import router from './router/router'
 import React from 'react'
 import store from './slices'
+import './styles/normalize.scss';
 
 createRoot(document.getElementById('root')).render(
     <React.StrictMode>
